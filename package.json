@@ -8,8 +8,25 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@chakra-ui/react": "^1.6.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "@hookform/resolvers": "^2.4.0",
+    "framer-motion": "^4.1.9",
     "next": "10.1.3",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.3.0",
+    "react-icons": "^4.2.0",
+    "react-phone-number-input": "^3.1.19",
+    "yup": "^0.32.9",
+    "yup-phone": "^1.2.19"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "@types/react": "^17.0.3",
+    "@types/react-phone-number-input": "^3.0.6",
+    "typescript": "^4.2.4"
   }
 }
