@@ -1,14 +1,11 @@
-import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import 'yup-phone';
-import { yupResolver } from '@hookform/resolvers/yup';
 
+import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react';
 import { Input } from './Input';
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
-
-import { useState } from 'react';
 
 type FormData = {
   name: string;
@@ -34,9 +31,7 @@ export function Form() {
 
   const handleSubmitForm: SubmitHandler<FormData> = async (values) => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log(values);
   };
-  const [value, setValue] = useState();
 
   return (
     <>
@@ -71,14 +66,14 @@ export function Form() {
             id="phone"
             {...register('phone')}
             error={errors.phone}
-            placeholder="(+55) 99999-9999"
+            placeholder="+55 (43) 99999-9999"
             icon={RiPhoneFill}
           />
         </Stack>
         <Button
           w="100%"
           size="lg"
-          colorScheme="pink"
+          colorScheme="yellow"
           type="submit"
           mt={8}
           isLoading={formState.isSubmitting}

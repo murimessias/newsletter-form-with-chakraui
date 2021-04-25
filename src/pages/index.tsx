@@ -1,13 +1,6 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Stack,
-  Select,
-  Button,
-  Text,
-} from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { Form } from '../components/Form/Index';
+import { NewsletterForm } from '../components/NewsletterForm';
 
 export default function Home() {
   return (
@@ -20,7 +13,8 @@ export default function Home() {
         bg="gray.800"
         borderRadius={8}
       >
-        <Form />
+        {/* <Form /> */}
+        <NewsletterForm />
       </Flex>
     </Flex>
   );
