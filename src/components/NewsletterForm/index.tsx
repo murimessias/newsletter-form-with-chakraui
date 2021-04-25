@@ -27,7 +27,7 @@ export function NewsletterForm() {
     const data = new FormData(e.target);
     console.log(data);
 
-    fetch('https://robertapeixoto.activehosted.com/proc.php', {
+    fetch('https://murilomessias.activehosted.com/proc.php', {
       method: 'POST',
       body: data,
       mode: 'no-cors',
@@ -59,10 +59,10 @@ export function NewsletterForm() {
       )}
 
       {!formSubmitted && (
-        <Box as="form" onSubmit={onSubmit} id="_Box_3_">
+        <Box as="form" onSubmit={onSubmit} id="_Box_1_">
           <Stack spacing={4}>
-            <input type="hidden" name="u" value="3" />
-            <input type="hidden" name="f" value="3" />
+            <input type="hidden" name="u" value="1" />
+            <input type="hidden" name="f" value="1" />
             <input type="hidden" name="s" />
             <input type="hidden" name="c" value="0" />
             <input type="hidden" name="m" value="0" />

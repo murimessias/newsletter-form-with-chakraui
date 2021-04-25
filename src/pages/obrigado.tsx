@@ -1,5 +1,5 @@
-import { Teste } from '../components/Teste';
+import { NewsletterForm } from '../components/NewsletterForm';
 
 export default function Obrigado() {
-  return <Teste />;
+  return <NewsletterForm />;
 }
