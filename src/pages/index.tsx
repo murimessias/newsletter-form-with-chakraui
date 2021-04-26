@@ -14,7 +14,7 @@ export default function Home() {
         borderRadius={8}
       >
         {/* <Form /> */}
-        <NewsletterForm />
+        <NewsletterForm custom="1" />
       </Flex>
     </Flex>
   );
