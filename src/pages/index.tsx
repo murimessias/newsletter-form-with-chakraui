@@ -1,6 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-import { Form } from '../components/Form/Index';
-import { NewsletterForm } from '../components/NewsletterForm';
+import { ActiveCampaing } from '../components/Unform';
 
 export default function Home() {
   return (
@@ -13,8 +12,7 @@ export default function Home() {
         bg="gray.800"
         borderRadius={8}
       >
-        {/* <Form /> */}
-        <NewsletterForm custom="1" />
+        <ActiveCampaing id={1} />
       </Flex>
     </Flex>
   );

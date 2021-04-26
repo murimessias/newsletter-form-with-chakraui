@@ -7,6 +7,7 @@ import fetch from 'isomorphic-unfetch';
 
 import { Input } from './Input';
 import { Button } from '@chakra-ui/button';
+import { Flex, Stack } from '@chakra-ui/layout';
 
 interface FormData {
   email: string;
@@ -20,8 +21,9 @@ interface ActiveCampaingProps {
 export function ActiveCampaing({ id }: ActiveCampaingProps) {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit: SubmitHandler<FormData> = async (data) => {
+  const handleSubmit: SubmitHandler<FormData> = async (data, event) => {
     const { email, fullname } = data;
+    console.log(event);
     const url = `https://murilomessias.activehosted.com/proc.php?u=${id}&f=${id}&s=&c=0&m=0&act=sub&v=2&fullname=${fullname}&email=${email}&jsonp=true`;
     fetch(url, {
       method: 'POST',
@@ -60,22 +62,24 @@ export function ActiveCampaing({ id }: ActiveCampaingProps) {
   return (
     <>
       <Form onSubmit={handleSubmit} ref={formRef}>
-        <Input
-          type="text"
-          name="fullname"
-          label="Nome"
-          placeholder="Digite seu nome"
-        />
-        <Input
-          type="text"
-          name="email"
-          label="Email"
-          placeholder="Digite seu e-mail"
-        />
+        <Stack spacing={4}>
+          <Input
+            type="text"
+            name="fullname"
+            label="Nome"
+            placeholder="Digite seu nome"
+          />
+          <Input
+            type="text"
+            name="email"
+            label="Email"
+            placeholder="Digite seu e-mail"
+          />
 
-        <Button type="submit" colorScheme="pink">
-          Quero Receber
-        </Button>
+          <Button type="submit" colorScheme="pink" size="lg">
+            Quero Receber
+          </Button>
+        </Stack>
       </Form>
     </>
   );
