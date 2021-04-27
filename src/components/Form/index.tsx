@@ -63,7 +63,7 @@ export function Form({ id }: FormProps) {
       setIsSubmitting(true);
 
       setTimeout(() => {
-        router.push('/obrigado'); // and define where to redirect
+        router.push(`/obrigado?fullname=${fullname}`); // and define where to redirect
       }, 3000);
     } catch (err) {
       const validationErrors = {};
